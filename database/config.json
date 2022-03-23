@@ -1,0 +1,14 @@
+{
+    "development": {
+      "username": "root",
+      "database": "banco_pi",
+      "host": "localhost",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "root",
+      "database": "banco_pi",
+      "host": "localhost",
+      "dialect": "mysql"
+    }
+  }
