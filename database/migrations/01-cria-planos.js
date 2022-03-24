@@ -1,6 +1,6 @@
 module.exports = {
     up: async (queryInterface, Sequelize) => {
-        return queryInterface.createTable("usuarios", {
+        return queryInterface.createTable("planos", {
             id: {
                 type: Sequelize.INTEGER,
                 autoIncrement: true,
@@ -8,22 +8,27 @@ module.exports = {
                 primaryKey: true
             },
 
-            email: {
+            nome: {
                 type: Sequelize.STRING,
                 allowNull: false
             },
 
-            senha: {
+            descricao: {
                 type: Sequelize.STRING,
                 allowNull: false
             },
 
-            created_at: {
+            preco: {
+                type: Sequelize.DECIMAL,
+                allowNull: false
+            },
+
+            createdAt: {
                 type: Sequelize.DATE,
                 allowNull: false
             },
 
-            updated_at: {
+            updatedAt: {
                 type: Sequelize.DATE,
                 allowNull: false
             },
@@ -31,6 +36,6 @@ module.exports = {
     },
 
     down: async (queryInterface) => {
-        return queryInterface.dropTable("usuarios");
+        return queryInterface.dropTable("planos");
     },
 };

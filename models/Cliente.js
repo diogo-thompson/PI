@@ -1,3 +1,4 @@
+const { Association } = require('sequelize')
 const Sequelize = require('sequelize')
 const database = require('../database/index')
 
@@ -30,20 +31,8 @@ const Cliente = database.define('clientes', {
         allowNull: false
     },
 
-    created_at: {
-        type: Sequelize.DATE,
-        allowNull: false
-    },
-
-    updated_at: {
-        type: Sequelize.DATE,
-        allowNull: false
-    }
-
 }, {
-    timeStamps: false,
-    createdAt: false,
-    updatedAt: false
+    timestamps: true,
 })
 
 module.exports = Cliente

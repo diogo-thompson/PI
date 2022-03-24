@@ -26,9 +26,7 @@ const Plano = database.define('planos', {
     }
 
 }, {
-    timeStamps: false,
-    createdAt: false,
-    updatedAt: false
+    timestamps: true,
 })
 
 module.exports = Plano

@@ -7,16 +7,14 @@ const Pagamento = database.define('Vendas', {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true
-    }
+    },
 
     datavenda: {
         type: Sequelize.DATE,
     }
 
 }, {
-    timeStamps: false,
-    createdAt: false,
-    updatedAt: false
+    timestamps: true,
 })
 
 module.exports = Pagamento

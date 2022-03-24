@@ -1,6 +1,6 @@
 module.exports = {
     up: async (queryInterface, Sequelize) => {
-        return queryInterface.createTable("planos", {
+        return queryInterface.createTable("clientes", {
             id: {
                 type: Sequelize.INTEGER,
                 autoIncrement: true,
@@ -13,22 +13,33 @@ module.exports = {
                 allowNull: false
             },
 
-            descricao: {
+            cpf: {
                 type: Sequelize.STRING,
                 allowNull: false
             },
 
-            preco: {
-                type: Sequelize.DECIMAL,
+            email: {
+                type: Sequelize.STRING,
                 allowNull: false
             },
 
-            created_at: {
+            senha: {
+                type: Sequelize.STRING,
+                allowNull: false
+            },
+
+            plano_id: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
+                references: {model:'planos', key:'id'}
+            },
+
+            createdAt: {
                 type: Sequelize.DATE,
                 allowNull: false
             },
 
-            updated_at: {
+            updatedAt: {
                 type: Sequelize.DATE,
                 allowNull: false
             },
@@ -36,6 +47,6 @@ module.exports = {
     },
 
     down: async (queryInterface) => {
-        return queryInterface.dropTable("planos");
+        return queryInterface.dropTable("clientes");
     },
 };
