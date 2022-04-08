@@ -1,0 +1,15 @@
+ {
+    "development": {
+    "username": "root",
+    "database": "academiacodigo",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "database": "academiacodigo",
+    "host": "localhost",
+    "dialect": "mysql"
+    }
+}
+

@@ -1,9 +1,18 @@
+const Plano = require("../models/Plano")
 
-function plano(req, res, next) {
-    res.render('planos.ejs')
-  }  
+function planos(req, res, next) {
+  res.render('planos.ejs')
+} 
+
+async function buscaplanos (req, res, next) {
+    const resultado = await Plano.findAll( );
+    res.send('resultado');
+
+ 
+  }
+ 
 
 
   module.exports = {
-    plano
+    planos
   }
