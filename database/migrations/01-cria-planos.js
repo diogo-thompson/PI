@@ -24,7 +24,7 @@ up: async(QueryInterface, Sequelize)=> {
 
         create_at: {
             allowNull: false,
-            type:SequelizeScopeError.DATE,
+            type:Sequelize.DATE,
         },
 
         updated_at: {

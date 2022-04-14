@@ -6,7 +6,7 @@ function cadastro(req, res, next) {
 
 async function lista (req, res, next) {
     const resultado = await Cliente.findAll( );
-  res.send(resultado);
+  res.json(resultado);
   
   }
 
@@ -15,7 +15,7 @@ async function lista (req, res, next) {
     const resultado = await Cliente.create({
       nome, cpf, email, senha, plano_id
     });
-    res.send(resultado);
+    res.json(resultado);
   }
 
 
