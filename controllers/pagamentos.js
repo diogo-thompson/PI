@@ -1,3 +1,4 @@
+const Pagamento = require("../models/Pagamento")
 
 function pagamento(req, res, next) {
     res.render('pagamentos.ejs')
@@ -11,7 +12,7 @@ function pagamento(req, res, next) {
     res.json(resultado);
   }
 
-  async function listarpagamentos (req, res, next) {
+  async function listar (req, res, next) {
     const resultado = await Pagamento.findAll( );
   res.json(resultado);
   
@@ -21,5 +22,5 @@ function pagamento(req, res, next) {
   module.exports = {
     pagamento,
     create,
-    listarpagamentos
+    listar
   }

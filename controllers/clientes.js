@@ -18,10 +18,22 @@ async function lista (req, res, next) {
     res.json(resultado);
   }
 
+  async function deletarcliente(req, res, next) {
+    const id = req.params.id
+    try {
+        const retornoDoDelete = await Cliente.destroy({ where: { id: id } })
+        return res.json(retornoDoDelete)
+    } catch (error) {
+        return res.json({ message: error.message })
+    }
+
+}
+
 
   module.exports = {
     cadastro,
     lista,
-    create
+    create,
+    deletarcliente
 
   }

@@ -4,6 +4,13 @@ function planos(req, res, next) {
   res.render('planos.ejs')
 } 
 
+async function listar (req, res, next) {
+  const resultado = await Plano.findAll( );
+res.json(resultado);
+
+}
+
+
   async function create(req, res, next) {
     const {nome, descricao, valor} = req.body;
     const resultado = await Pagamento.create({
@@ -26,6 +33,7 @@ function planos(req, res, next) {
 
   module.exports = {
     planos, 
+    listar,
     create,
     deletarplano
   }

@@ -1,13 +1,13 @@
 
 var express = require('express');
 var router = express.Router();
-var {pagamento, create, listarpagamentos} = require('../controllers/pagamentos');
+var {pagamento, create, listar} = require('../controllers/pagamentos');
 /* GET users listing. */
 
 router.get('/', pagamento);
 
 router.post('/', create)
 
-router.get('/lista', listarpagamentos);
+router.get('/lista', listar);
 
 module.exports = router;

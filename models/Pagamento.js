@@ -41,7 +41,7 @@ const Pagamento = database.define('pagamentos', {
 
 create_at: {
     allowNull: false,
-    type:SequelizeScopeError.DATE,
+    type:Sequelize.DATE,
 },
 
 updated_at: {
