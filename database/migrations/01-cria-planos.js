@@ -1,41 +1,42 @@
-module.exports = {
-    up: async (queryInterface, Sequelize) => {
-        return queryInterface.createTable("planos", {
-            id: {
-                type: Sequelize.INTEGER,
-                autoIncrement: true,
-                allowNull: false,
-                primaryKey: true
-            },
+module.exports= {
+up: async(QueryInterface, Sequelize)=> {
+    return QueryInterface.createTable ("planos",{
+        id: {
+            type: Sequelize.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        },
+    
+        nome: {
+            type: Sequelize.STRING,
+           
+        },
+    
+        descricao: {
+            type: Sequelize.STRING,
+            
+        },
+    
+        valor: {
+            type: Sequelize.STRING,
+            
+        },
 
-            nome: {
-                type: Sequelize.STRING,
-                allowNull: false
-            },
+        create_at: {
+            allowNull: false,
+            type:Sequelize.DATE,
+        },
 
-            descricao: {
-                type: Sequelize.STRING,
-                allowNull: false
-            },
+        updated_at: {
+            allowNull: false,
+            type: Sequelize.DATE,
+        },
+});
 
-            preco: {
-                type: Sequelize.DECIMAL,
-                allowNull: false
-            },
+},
 
-            createdAt: {
-                type: Sequelize.DATE,
-                allowNull: false
-            },
+down: async(QueryInterface)=> {
+    return QueryInterface.dropTable("planos");
 
-            updatedAt: {
-                type: Sequelize.DATE,
-                allowNull: false
-            },
-        });
-    },
-
-    down: async (queryInterface) => {
-        return queryInterface.dropTable("planos");
     },
 };

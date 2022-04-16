@@ -1,33 +1,38 @@
 module.exports= {
     up: async(QueryInterface, Sequelize)=> {
-        return QueryInterface.createTable ("clientes",{
+        return QueryInterface.createTable ("pagamentos",{
             id: {
                 type: Sequelize.INTEGER,
                 autoIncrement: true,
                 primaryKey: true
             },
         
-            nome: {
+            nomecartao: {
                 type: Sequelize.STRING,
                
             },
         
-            cpf: {
+            numerocartao: {
                 type: Sequelize.STRING,
                 
             },
         
-            email: {
+            vencimentocartao: {
                 type: Sequelize.STRING,
                 
             },
         
-            senha: {
+            cvv: {
                 type: Sequelize.STRING,
                
             },
         
             plano_id: {
+                type: Sequelize.STRING
+        
+            },
+
+            cliente_id: {
                 type: Sequelize.STRING
         
             },
@@ -47,7 +52,7 @@ module.exports= {
     },
     
     down: async (QueryInterface)=> {
-        return QueryInterface.dropTable("clientes");
+        return QueryInterface.dropTable("pagamentos");
     
         },
     };

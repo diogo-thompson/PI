@@ -1,9 +1,16 @@
 
 var express = require('express');
 var router = express.Router();
-var {plano} = require('../controllers/planos');
+var {planos, listar, create, deletarplano} = require('../controllers/planos');
+var Plano = require('../models/Plano');
 
-/* GET users listing. */
-router.get('/', plano);  
+
+router.get('/', planos);
+
+router.get('/lista', listar)
+
+router.post('/', create);
+
+router.delete('/deletar/:id', deletarplano);
 
 module.exports = router;
