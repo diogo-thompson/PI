@@ -5,13 +5,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="stylesheets/clientes.css">
+        <link rel="stylesheet" href="stylesheets/pagamentos.css">
         <title>Academia Código</title>
     </head>
 
     <body>
         <header class="navbar">
-            
             <img alt="Logo" src="images/logo.jpg" />
             <nav>
                 <a href="/"> Home </a>
@@ -23,44 +22,35 @@
         <section class="main-page">
 
             <div class="form-container">
-                <form action="/clientes" method="POST">
-                    <h2> CADASTRE-SE </h2>
+                <form action="/pagamentos" method="POST">                    
+                    <h2> Cartão para pagamento </h2>
 
                     <div class="field">
-                        <label>Nome</label>  
-                        <input type="text" name="nome" id="nome"/>
+                        <input type="nome" id="nome" nome="nome" placeholder="Nome do plano" required>
                     </div>
-
-                    <div class="field">
-                      <label>CPF</label>  
-                      <input type="number" name="cpf" id="cpf"/>
-                    </div>
-
-                    <div class="field">
-                        <label>Email</label>  
-                        <input type="email" name="email" id="email"/>
-                    </div>
-
-                    <div class="field">
-                        <label>Senha</label>  
-                        <input type="password" name="senha" id="senha"/>
-                    </div>
-
-                    <div class="botao">
-                        <button type="submit">Cadastrar</button>
-                    </div>       
                     
-                
-                </form> 
+                    <div class="field">
+                        <input type="text" onkeypress= "return event.charCode >= 48 && event.charCode <= 57" id="valor" nome="valor" placeholder="Valor do plano" maxlength="5" required>
+                    </div>
 
-            </div>
+                    <div class="field">
+                        <input type="text" id="descricao" nome="descricao" placeholder="Descrição do plano" required>
+                    </div>
+                    
+                    <div class="botao">
+                        <button>Cadastrar</button>
+                    </div>
+                                    
+                </form>
             
-        </section>
+            </div>
 
+        </section>
+     
         <footer>
 
             <div class="dev">
-                Todos os direitos reservados <br>
+                &copy; Todos os direitos reservados <br>
                 Desenvolvido por Diogo Thompson <br>
             </div>
             

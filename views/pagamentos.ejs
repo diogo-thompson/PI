@@ -22,11 +22,11 @@
         <section class="main-page">
 
             <div class="form-container">
-                <form>                    
+                <form action="/pagamentos" method="POST">                    
                     <h2> Cartão para pagamento </h2>
 
                     <div class="field">
-                        <input type="nome" id="nome" nome="nome" placeholder="Nome no cartão" required>
+                        <input type="nome" id="nomecartao" nome="nomecartao" placeholder="Nome no cartão" required>
                     </div>
                     
                     <div class="field">
@@ -34,11 +34,11 @@
                     </div>
 
                     <div class="field">
-                        <input type="month" id="datavencimento" nome="datavencimento" placeholder="Vencimento do cartão" required>
+                        <input type="month" id="vencimentocartao" nome="vencimentocartao" placeholder="Vencimento do cartão" required>
                     </div>
 
                     <div class="field">
-                        <input type="text" onkeypress= "return event.charCode >= 48 && event.charCode <= 57" id="numerocsv" nome="numerocsv" placeholder="Número do código de verificação" maxlength="3" required>
+                        <input type="text" onkeypress= "return event.charCode >= 48 && event.charCode <= 57" id="cvv" nome="cvv" placeholder="Número do código de verificação" maxlength="3" required>
                     </div>
                     
                     <div class="botao">

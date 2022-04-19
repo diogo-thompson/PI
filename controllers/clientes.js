@@ -15,7 +15,7 @@ async function lista (req, res, next) {
     const resultado = await Cliente.create({
       nome, cpf, email, senha, plano_id
     });
-    res.json(resultado);
+    res.render("planos.ejs", {status: "Sucesso"});
   }
 
   async function deletarcliente(req, res, next) {

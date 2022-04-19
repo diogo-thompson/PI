@@ -120,6 +120,7 @@ button{
     height: 4%;
     padding: 5px;
     margin:25px;
+    cursor: pointer;
 }
 
 /* Rodapé */

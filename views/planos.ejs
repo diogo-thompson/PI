@@ -20,6 +20,12 @@
         </header>
 
         <main>
+
+            <p> 
+            
+                <%= status %>
+
+            </p>
             <section >
             <div> 
                 <h1>Escolha seu plano</h1>
@@ -28,82 +34,29 @@
                 <p>Treine o quanto quiser com os plano. Musculação, Aeróbico, Movimento, Capoeira e Ginástica </p>
             </div>
             </section>
+
+            <% listaplanos.forEach(function(item){ %>
+
             <section class="plano">
                 <div>
-                    <h2>plano 1</h2>   
+                    <h2>
+                        <%= item.nome %>
+                    </h2>   
                 </div>
                 <div>
-                   <h3> a partir de R$ 9</h3> 
+                   <h3> a partir de R$ <%= item.valor %></h3> 
                 </div>
                 <div>
-                    <ul>
-                        <li>Aulas de Ginática</li>
-                        <li>Aulas de Musculação e Aeróbicos</li>
-                        <li>Sem taxa de Adesaõ</li>
-                        <li>Sem taxa de Cancelamento</li>
-                    </ul>
+                    <p> <%= item.descricao %> </p>
                 </div>
+ 
                 <div>
-                <button>assinar</button>
-                </div>  
+                    <a href="pagamentos">
+                        <button>assinar</button>
+                    </a>                
+                </div> 
             </section>
-            <section class="plano">
-                <div>
-                    <h2>plano 2</h2>   
-                </div>
-                <div>
-                   <h3> a partir de R$ 19</h3> 
-                </div>
-                <div>
-                    <ul>
-                        <li>Aulas de Ginática</li>
-                        <li>Aulas de Musculação e Aeróbicos</li>
-                        <li>Sem taxa de Adesaõ</li>
-                        <li>Sem taxa de Cancelamento</li>
-                    </ul>
-                </div>
-                <div>
-                <button>assinar</button>
-                </div>  
-            </section>
-            <section class="plano">
-                <div>
-                    <h2>plano 3</h2>   
-                </div>
-                <div>
-                   <h3> a partir de R$ 29</h3> 
-                </div>
-                <div>
-                    <ul>
-                        <li>Aulas de Ginática</li>
-                        <li>Aulas de Musculação e Aeróbicos</li>
-                        <li>Sem taxa de Adesaõ</li>
-                        <li>Sem taxa de Cancelamento</li>
-                    </ul>
-                </div>
-                <div>
-                <button>assinar</button>
-                </div>  
-            </section>
-            <section class="plano">
-                <div>
-                    <h2>plano 4</h2>   
-                </div>
-                <div>
-                   <h3> a partir de R$ 39</h3> 
-                </div>
-                <div>
-                    <ul>
-                        <li>Aulas de Ginática</li>
-                        <li>Aulas de Musculação e Aeróbicos</li>
-                        <li>Sem taxa de Adesaõ</li>
-                        <li>Sem taxa de Cancelamento</li>
-                    </ul>
-                </div>
-                <div>
-                <button>assinar</button>
-                </div>  
-            </section>
+            <% }) %>
         </main>
         <footer>
 

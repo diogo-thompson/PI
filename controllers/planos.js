@@ -1,14 +1,13 @@
 const Plano = require("../models/Plano")
 
-function planos(req, res, next) {
-  res.render('planos.ejs')
+async function planos(req, res, next) {
+  const resultado = await Plano.findAll( );
+  res.render('planos.ejs', {status:" ", listaplanos: resultado})
 } 
 
-async function listar (req, res, next) {
-  const resultado = await Plano.findAll( );
-res.json(resultado);
-
-}
+function criaplanos(req, res, next) {
+  res.render('criaplanos.ejs')
+} 
 
 
   async function create(req, res, next) {
@@ -33,7 +32,7 @@ res.json(resultado);
 
   module.exports = {
     planos, 
-    listar,
     create,
-    deletarplano
+    deletarplano,
+    criaplanos
   }
