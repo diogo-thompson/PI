@@ -1,0 +1,167 @@
+/* Estilização geral (Envolve todos os componentes) */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+/* Todas as imagens */
+img {
+    max-width: 100%;
+}
+
+/* Navegação */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #b4b4b4;
+}
+
+.navbar img {
+    width: 80px;
+    cursor: pointer;
+}
+
+.navbar nav a {
+    margin-left: 20px;
+    margin: 1px;
+    color: #b4b4b4;
+}
+
+/* Link */
+a {
+    text-decoration: none;
+    margin: 0 0 0 0;
+    padding: 8px;
+}
+
+.navbar nav a:link {
+    background-color: black;
+    font-weight: bold;
+    
+}
+
+.navbar nav a:hover {
+    color: white;
+    background-color: black;
+}
+
+/* Seção */
+.main-page{
+    display: flex ;
+    margin: 60px;
+}
+.main-page .form-container{
+    margin: auto;
+}
+
+.main-page .form-container form{
+    max-width: 400px;
+    border-radius: 0px;
+    background-color: #b4b4b4 ;
+    margin: 20px;
+    padding: 55px;
+    align-items: center;   
+}
+
+.main-page .form-container form h2{
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold ;
+    text-align: center;
+}
+
+.main-page .form-container .field {
+    margin-bottom: 25px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+.main-page .form-container .field input {
+    border: 2px solid black;
+    outline: none;
+    padding: 10px;
+    width: 80%;
+    margin-top: 2px;
+}
+
+.main-page .form-container .botao button{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    padding: 15px;
+    border: 2px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.main-page .form-container .cadastro {
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+.main-page .form-container .cadastro a{
+    color: black;
+    font-size: small;
+
+}
+.main-page .form-container .cadastro a:hover{
+color:white;
+font-weight: bold;
+text-transform: uppercase;
+
+}
+
+
+/* Rodapé */
+footer {
+    display: flex;
+    padding: 20px;
+    background-color: #b4b4b4;
+}
+
+footer .dev {
+    width: 50%;
+    text-align: start;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+footer .endereco {
+    width: 50%;
+    text-align: end;
+    margin-right: 30px;
+}
+
+/* Ajustando demais dispositivos */
+@media(max-width: 700px) {
+    .first-section {
+        flex-direction: column;
+    }
+
+    .first-section .foto-promocao {
+        width: 100%;
+    }
+
+    .first-section .promocao{
+        width: 100%;
+    }
+
+    .main-page .form-container form {
+        width: 100%;
+    }
+}
+
+@media(max-width: 350px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+}

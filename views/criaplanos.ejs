@@ -5,40 +5,41 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="stylesheets/pagamentos.css">
+        <link rel="stylesheet" href="/stylesheets/criaplanos.css">
         <title>Academia Código</title>
     </head>
 
     <body>
         <header class="navbar">
-            <img alt="Logo" src="images/logo.jpg" />
+            <img alt="Logo" src="/images/logo.jpg"/>
             <nav>
                 <a href="/"> Home </a>
-                <a href="planos"> Planos </a>
-                <a href="clientes"> Cadastre-se </a>
+                <a href="../planos"> Planos </a>
+                <a href="../clientes"> Cadastre-se </a>
+                <a href="/planos/criarplanos"> Criar Planos </a>
             </nav>
         </header>
 
         <section class="main-page">
 
             <div class="form-container">
-                <form action="/pagamentos" method="POST">                    
-                    <h2> Cartão para pagamento </h2>
+                <form action="/planos" method="POST">                    
+                    <h2> Cadastre um novo plano </h2>
 
                     <div class="field">
-                        <input type="nome" id="nome" nome="nome" placeholder="Nome do plano" required>
+                        <input type="nome" id="nome" name="nome" placeholder="Nome do plano" required>
                     </div>
                     
                     <div class="field">
-                        <input type="text" onkeypress= "return event.charCode >= 48 && event.charCode <= 57" id="valor" nome="valor" placeholder="Valor do plano" maxlength="5" required>
+                        <input type="text" id="valor" name="valor" placeholder="Valor do plano" maxlength="5" required>
                     </div>
 
                     <div class="field">
-                        <input type="text" id="descricao" nome="descricao" placeholder="Descrição do plano" required>
+                        <input type="text" id="descricao" name="descricao" placeholder="Descrição do plano" required>
                     </div>
                     
                     <div class="botao">
-                        <button>Cadastrar</button>
+                        <button>Cadastrar um novo</button>
                     </div>
                                     
                 </form>

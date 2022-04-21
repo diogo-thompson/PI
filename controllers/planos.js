@@ -12,11 +12,13 @@ function criaplanos(req, res, next) {
 
   async function create(req, res, next) {
     const {nome, descricao, valor} = req.body;
-    const resultado = await Pagamento.create({
-      nome, descricao, valor
+    console.log(nome, descricao, valor);
+    const resultado = await Plano.create({
+      nome, descricao, valor, 
     });
 
-    res.json(resultado);
+    const listaplanos = await Plano.findAll( );
+    res.render("planos.ejs", {status: "Sucesso", listaplanos:listaplanos})
   }
 
   async function deletarplano(req, res, next) {

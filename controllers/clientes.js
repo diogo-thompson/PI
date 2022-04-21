@@ -1,6 +1,8 @@
 const Cliente = require("../models/Cliente")
+const Plano = require("../models/Plano")
 
 function cadastro(req, res, next) {
+
   res.render('clientes.ejs')
 } 
 
@@ -15,7 +17,9 @@ async function lista (req, res, next) {
     const resultado = await Cliente.create({
       nome, cpf, email, senha, plano_id
     });
-    res.render("planos.ejs", {status: "Sucesso"});
+    const listaplanos = await Plano.findAll( );
+    res.render("planos.ejs", {status: "Sucesso", listaplanos:listaplanos})
+
   }
 
   async function deletarcliente(req, res, next) {
