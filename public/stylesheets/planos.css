@@ -55,20 +55,28 @@ main{
     background-color: #b4b4b4;
 }
 
+.sucesso{
+    color: rgba(118, 211, 26, 0.932);
+    font-size:x-large;
+    text-transform: uppercase;
+}
+
+section.titulo p{
+    color: black;
+}
+
 h1{
-    color:black;
     padding-top: 20px;
     text-align: center;
     font-size: xx-large;
-
-    
+   
 }
 
 p{
     padding-top: 20px;
     align-items: center;
     text-align: center;
-    font-size: medium;
+    font-size: large;
 }
 
 section.plano{
@@ -78,7 +86,6 @@ section.plano{
     width: 20%;
     margin: 35px;
     
-
 }
 h2{
     color: white;
@@ -94,33 +101,44 @@ h3{
     text-transform: uppercase;
     font-style:normal;
     margin:20px;
-    padding: 30px;
-    width: 60%;
-    
-   
-
+    padding: 25px;
+    width: 70%;
+       
 }
-ul{
+
+p{
     color: white;
-    width: 90%;
-    height: 18%; 
-    padding: 8px;
-
-}   
-li{
-    margin: 10px;
-    list-style: none;
+    font-size:medium;
+    text-transform: uppercase;
+    margin: 20px;
 
 }
+
      
 button{
-    font-size:larger;
+    font-size:medium;
     text-transform: uppercase;
-    width: 60%;
-    height: 4%;
-    padding: 5px;
-    margin:25px;
+    width: 40%;
+    margin:5px;
     cursor: pointer;
+}
+
+.assinar a{
+    color: white;
+    font-size:larger;
+    text-transform: uppercase
+}
+
+.assinar a:hover{
+    color: green;
+    font-weight: bold;
+    text-transform: uppercase;
+    }
+   
+.excluir {
+    text-align: center;
+    margin-top: 20px;
+
 }
 
 /* Rodapé */

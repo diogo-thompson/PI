@@ -9,7 +9,6 @@ function criaplanos(req, res, next) {
   res.render('criaplanos.ejs')
 } 
 
-
   async function create(req, res, next) {
     const {nome, descricao, valor} = req.body;
     console.log(nome, descricao, valor);

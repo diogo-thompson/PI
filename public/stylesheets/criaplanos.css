@@ -95,29 +95,12 @@ a {
     font-weight: bold;
     text-transform: uppercase;
     border: none;
-    padding: 15px;
+    padding: 10px;
     border: 2px;
     cursor: pointer;
-    width: 50%;
+    width: 90%;
 }
 
-.main-page .form-container .cadastro {
-    text-align: center;
-    margin-top: 40px;
-
-}
-
-.main-page .form-container .cadastro a{
-    color: black;
-    font-size: small;
-
-}
-.main-page .form-container .cadastro a:hover{
-color:white;
-font-weight: bold;
-text-transform: uppercase;
-
-}
 
 
 /* Rodapé */

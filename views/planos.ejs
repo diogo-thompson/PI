@@ -11,7 +11,7 @@
 
     <body>
         <header class="navbar">
-            <img alt="Logo" src="/images/logo.jpg" />
+            <a href="/"> <img alt="Logo" src="/images/logo.jpg"> </a>
             <nav>
                 <a href="/"> Home </a>
                 <a href="planos"> Planos </a>
@@ -22,12 +22,12 @@
 
         <main>
 
-            <p> 
+            <p class="sucesso"> 
             
                 <%= status %>
 
             </p>
-            <section >
+            <section class="titulo" >
             <div> 
                 <h1>Escolha seu plano</h1>
             </div>
@@ -51,9 +51,11 @@
                     <p> <%= item.descricao %> </p>
                 </div>
  
-                <div>
-                    <a href="pagamentos">
-                        <button>assinar</button>
+                <div class="assinar">
+                    <a href="pagamentos">assinar</a>               
+                </div>
+                <div class="excluir">
+                        <button>Excluir Plano</button>
                     </a>                
                 </div> 
             </section>

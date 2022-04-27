@@ -101,6 +101,18 @@ a {
     width: 50%;
 }
 
+.main-page .form-container .botao a{
+    color: black;
+    font-size:medium;
+
+}
+
+.main-page .form-container .botao a:hover{
+    color:white;
+    font-weight: bold;
+    text-transform: uppercase;
+    }
+    
 .main-page .form-container .cadastro {
     text-align: center;
     margin-top: 40px;
@@ -109,7 +121,7 @@ a {
 
 .main-page .form-container .cadastro a{
     color: black;
-    font-size: small;
+    font-size: medium;
 
 }
 .main-page .form-container .cadastro a:hover{
